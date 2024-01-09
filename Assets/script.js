@@ -25,25 +25,33 @@ $(document).ready(function() {
         $(this).removeClass('present')
         $(this).addClass('future')
       }
-      updateHour()
-
-      setInterval(updateHour, 15000)
 
 
       $('saveBtn').click(function() {
+        // let nineText = $('#nineText').val()
+        // let tenText = $('#tenText').val()
+        // let elevenText = $('#elevenText').val()
+        // let twelveText = $('#twelveText').val()
+        // let thirteenText = $('#thirteenText').val()
+        // let fourteenText = $('#fourteenText').val()
+        // let fifteenText = $('#fifteenText').val()
+        // let sixteenText = $('#sixteenText').val()
+        // let seventeenText = $('#seventeenText').val()
         // grab values of the textareas (c;ass pf description)
         // save the values to local storage using the ids as the keys and the values of the textareas for the values
         // 
       })
 
-      // load any saced data from localStorages 
+      // load any saved data from localStorages 
     })
 
 
     
   }
 
+  updateHour()
 
+  setInterval(updateHour, 15000)
     
   }
 )
