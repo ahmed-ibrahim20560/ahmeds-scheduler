@@ -37,7 +37,7 @@ $(document).ready(function () {
     let key = $(this).parent().attr("id")
 
     let sibling = $(this).siblings("textarea").val()
-    console.log(sibling)
+    // console.log(sibling)
 
     localStorage.setItem(key, sibling)
 
@@ -46,14 +46,19 @@ $(document).ready(function () {
 
   $(".time-block").each(function() {
     let id = $(this).attr("id")
+ 
     $(this).children("textarea").val(localStorage.getItem(id))
   })
 
 
-  $(".clearBtn").click(function() {
-    localStorage.clear()
-  })
 
+
+  $(document).on("click" , ".clearBtn", function() {
+    let id = $(this).parent().attr("id")
+    
+    localStorage.removeItem(id)
+    location.reload()
+  } )
 
 
   updateHour()
